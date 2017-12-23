@@ -15,6 +15,7 @@
 #  amenities    :json             not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  banner_url   :text
 #
 
 require 'rails_helper'

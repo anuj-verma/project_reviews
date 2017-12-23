@@ -15,6 +15,7 @@
 #  amenities    :json             not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  banner_url   :text
 #
 
 FactoryBot.define do
@@ -27,5 +28,6 @@ FactoryBot.define do
     min_price Faker::Number.between(20, 30)
     max_price Faker::Number.between(60, 70)
     price_metric 'Lacs'
+    banner_url Faker::Company.logo
   end
 end

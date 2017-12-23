@@ -17,6 +17,7 @@ p "*** Creating Projects Started ***"
     min_price: Faker::Number.between(20, 30),
     max_price: Faker::Number.between(60, 70),
     price_metric: 'Lacs',
+    banner_url: Faker::Company.logo,
     amenities: {
       fridge: [true, false].sample,
       park: [true, false].sample,
@@ -32,7 +33,7 @@ p "*** Creating Projects Completed ***"
 users = User.all
 
 # Creating Project Reviews
-p "*** Creating Reviews Started ***"
+p "*** Creating Project Reviews and Images Started ***"
 Project.all.each do |project|
   [5, 10].sample.times do
     project.reviews.create!(
@@ -42,5 +43,11 @@ Project.all.each do |project|
       project: project
     )
   end
+  [2, 3].sample.times do
+    project.images.create!(
+      name: Faker::Internet.user_name,
+      url: Faker::Company.logo
+    )
+  end
 end
-p "*** Creating Reviews Completed ***"
+p "*** Creating Project Reviews and Images Completed ***"
