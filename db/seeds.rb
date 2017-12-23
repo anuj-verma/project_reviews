@@ -1,5 +1,3 @@
-require 'faker'
-
 # Creating Users
 p "*** Creating Users Started ***"
 10.times do
