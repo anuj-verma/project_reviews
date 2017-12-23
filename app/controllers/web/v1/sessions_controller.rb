@@ -6,7 +6,10 @@ module Web
       def create
         user = User.find_by(email: session_params[:email])
         if user && user.authenticate(session_params[:password])
-          success_response(data: user.login_response, status_code: :ok)
+          success_response(
+            data: serialize_resource(user, Web::V1::UserLoginSerializer),
+            status_code: :ok
+          )
         else
           error_response(
             error_message: I18n.t('user.invalid'),

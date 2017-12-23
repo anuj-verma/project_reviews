@@ -1,9 +1,12 @@
 require 'rails_helper'
 
 resource "2. Reviews" do
+  let(:user)  { FactoryBot.create(:user) }
+
   before(:each) do
     header 'Accept', "application/#{APP_NAME}; version=web_v1"
     header 'Content-Type', 'application/json'
+    header 'X-Api-Key', AuthHandler.encode(user)
   end
 
   post '/projects/:project_id/reviews' do
@@ -13,7 +16,6 @@ resource "2. Reviews" do
     parameter 'description', 'Review comment given by User', scope: :review, required: true
 
     let!(:project) { FactoryBot.create(:project) }
-    let(:user)  { FactoryBot.create(:user) }
     let!(:project_id) { project.id }
 
     let(:created_review) { project.reviews.first }

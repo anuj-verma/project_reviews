@@ -32,6 +32,26 @@
           "method": "post"
         }
       ]
+    },
+    {
+      "name": "3. Sessions",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "S01. User SignIn with correct credentials",
+          "link": "3._sessions/s01._user_signin_with_correct_credentials.json",
+          "groups": "web_v1",
+          "route": "/login",
+          "method": "post"
+        },
+        {
+          "description": "S02. User SignIn with incorrect credentials",
+          "link": "3._sessions/s02._user_signin_with_incorrect_credentials.json",
+          "groups": "web_v1",
+          "route": "/login",
+          "method": "post"
+        }
+      ]
     }
   ]
 }

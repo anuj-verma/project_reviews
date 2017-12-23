@@ -1,9 +1,12 @@
 require 'rails_helper'
 
 resource "1. Projects" do
+  let(:user) { FactoryBot.create(:user) }
+
   before(:each) do
     header 'Accept', "application/#{APP_NAME}; version=web_v1"
     header 'Content-Type', 'application/json'
+    header 'X-Api-Key', AuthHandler.encode(user)
   end
 
   get '/projects' do
