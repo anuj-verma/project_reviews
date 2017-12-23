@@ -16,9 +16,17 @@ module Web
 
       def error_response(error_message:, status_code:)
         render json: {
-          error: {
-            message: error_message
+          errors: {
+            message: error_message,
           }
+        },
+        status: status_code
+      end
+
+      def resource_error_response(errors:, error_message:, status_code:)
+        render json: {
+          errors: errors,
+          message: error_message
         },
         status: status_code
       end
