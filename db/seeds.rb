@@ -1,7 +1,11 @@
 # Creating Users
 p "*** Creating Users Started ***"
 10.times do
-  User.create!(name: Faker::Name.name, email: Faker::Internet.email)
+  User.create!(
+    name: Faker::Name.name,
+    email: Faker::Internet.email,
+    password: '12345678'
+  )
 end
 p "*** Creating Users Completed ***"
 

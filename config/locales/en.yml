@@ -3,3 +3,7 @@ en:
     invalid: 'Invalid Review'
   project:
     not_found: 'Project not found'
+  user:
+    invalid: 'Email or Password is incorrect'
+  api_key:
+    invalid: 'Invalid API Key'

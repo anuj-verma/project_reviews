@@ -16,5 +16,7 @@ Rails.application.routes.draw do
     resources :projects, only: [:index, :show] do
       resources :reviews, only: [:create, :edit, :update]
     end
+
+    post '/login', to: 'sessions#create'
   end
 end

@@ -34,6 +34,12 @@ gem 'apitome'
 # A library for generating fake data such as names, addresses, and phone numbers.
 gem 'faker'
 
+# An easy way to keep your users' passwords secure
+gem 'bcrypt'
+
+# JSON Web Token (JWT) is a means of representing claims to be transferred between two parties.
+gem 'jwt'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
