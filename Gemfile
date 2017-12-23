@@ -29,6 +29,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Testing framework
   gem 'rspec-rails'
+  # A library for generating fake data such as names, addresses, and phone numbers.
+  gem 'faker'
 end
 
 group :development do

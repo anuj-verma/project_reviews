@@ -12,6 +12,7 @@
 #  min_price    :integer
 #  max_price    :integer
 #  price_metric :string
+#  amenities    :json             not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
