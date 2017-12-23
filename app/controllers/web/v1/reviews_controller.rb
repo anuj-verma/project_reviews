@@ -6,6 +6,7 @@ module Web
       def create
         review = @project.reviews.new(review_params)
         if review.save
+          review = serialize_resource(review, Web::V1::ReviewSerializer)
           success_response(data: review, status_code: :ok)
         else
           resource_error_response(
