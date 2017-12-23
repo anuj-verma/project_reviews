@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
+  API_CLIENT_VERSIONS.keys.each do |client|
+    API_CLIENT_VERSIONS[client].each do |version|
+      mount Apitome::Engine => "/docs/#{ client }/#{ version }",
+        as: "apitome-#{ client }-#{ version }",
+        constraints: ApitomeVersion.new(client, version)
+    end
+  end
   api_version(
     module: 'Web::V1',
     header: {
       name: 'Accept',
-      value: 'application/vnd.project_reviews.com; version=web_v1'
+      value: "application/#{APP_NAME}; version=web_v1"
     }
   ) do
     resources :projects, only: [:index, :show] do
