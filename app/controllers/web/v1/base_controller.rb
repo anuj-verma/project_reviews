@@ -6,7 +6,7 @@ module Web
       X_API_KEY = 'X-Api-Key'.freeze
 
       def authenticate!
-        jwt_payload = AuthHandler.decode(request.headers[X_API_KEY])
+        jwt_payload = ::AuthHandler.decode(request.headers[X_API_KEY])
         current_user(jwt_payload: jwt_payload)
       rescue JWT::ExpiredSignature
         render_unauthorized(error_message: I18n.t('api_key.expired'))
