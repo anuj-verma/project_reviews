@@ -31,9 +31,6 @@ gem 'rspec_api_documentation'
 # An API documentation reader for RSpec API Documentation
 gem 'apitome'
 
-# A library for generating fake data such as names, addresses, and phone numbers.
-gem 'faker'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -41,6 +38,8 @@ group :development, :test do
   gem 'rspec-rails'
   #  Factory bot is a fixtures replacement
   gem 'factory_bot_rails'
+  # A library for generating fake data such as names, addresses, and phone numbers.
+  gem 'faker'
 end
 
 group :development do
