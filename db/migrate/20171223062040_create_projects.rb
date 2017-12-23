@@ -7,8 +7,8 @@ class CreateProjects < ActiveRecord::Migration[5.1]
       t.integer :no_of_units
       t.integer :no_of_towers
       t.string :status
-      t.integer :min_price
-      t.integer :max_price
+      t.decimal :min_price
+      t.decimal :max_price
       t.string :price_metric
       t.json :amenities
 

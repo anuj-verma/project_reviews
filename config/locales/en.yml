@@ -3,7 +3,13 @@ en:
     invalid: 'Invalid Review'
   project:
     not_found: 'Project not found'
+    min_price:
+      invalid: 'Cannot be greater than Max Price'
+    max_price:
+      invalid: 'Cannot be less than Min Price'
   user:
     invalid: 'Email or Password is incorrect'
+    email:
+      invalid_format: 'Email format is incorrect'
   api_key:
     invalid: 'Invalid API Key'

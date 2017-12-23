@@ -14,5 +14,19 @@
 require 'rails_helper'
 
 RSpec.describe Image, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:image) { FactoryBot.create(:image) }
+
+  it 'is valid with valid attributes' do
+    expect(image).to be_valid
+  end
+
+  it 'is invalid without name' do
+    image.name = nil
+    expect(image).to_not be_valid
+  end
+
+  it 'is invalid without url' do
+    image.url = nil
+    expect(image).to_not be_valid
+  end
 end

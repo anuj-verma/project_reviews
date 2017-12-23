@@ -14,5 +14,22 @@
 require 'rails_helper'
 
 RSpec.describe Review, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:project) { FactoryBot.create(:project) }
+  let(:user) { FactoryBot.create(:user) }
+  let(:review) { FactoryBot.create(:review, project: project, user: user) }
+
+  it 'is valid with valid attributes' do
+    expect(review).to be_valid
+  end
+
+  it 'is invalid without rating' do
+    review.rating = nil
+    expect(review).to_not be_valid
+  end
+
+  it 'is invalid without description' do
+    review.description = nil
+    expect(review).to_not be_valid
+  end
 end
+

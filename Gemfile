@@ -47,6 +47,8 @@ group :development, :test do
   gem 'rspec-rails'
   #  Factory bot is a fixtures replacement
   gem 'factory_bot_rails'
+  # Code coverage
+  gem 'simplecov'
 end
 
 group :development do

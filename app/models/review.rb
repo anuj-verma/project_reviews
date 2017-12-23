@@ -14,4 +14,6 @@
 class Review < ApplicationRecord
   belongs_to :user
   belongs_to :project
+
+  validates :rating, :description, presence: true
 end

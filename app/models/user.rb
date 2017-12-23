@@ -14,17 +14,13 @@ class User < ApplicationRecord
 
   has_many :reviews
 
-  before_create :generate_and_set_auth_token
+  validates :name, :email, presence: true
+  validates :email, format: {
+    with: EMAIL_REGEX,
+    message: I18n.t('user.email.invalid_format')
+  }
 
-  def login_response
-    {
-      user: {
-        id: id,
-        email: email,
-        api_key: api_key
-      }
-    }
-  end
+  before_create :generate_and_set_auth_token
 
   private
 

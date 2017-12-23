@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 20171223184644) do
     t.integer "no_of_units"
     t.integer "no_of_towers"
     t.string "status"
-    t.integer "min_price"
-    t.integer "max_price"
+    t.decimal "min_price"
+    t.decimal "max_price"
     t.string "price_metric"
     t.json "amenities", default: {}, null: false
     t.datetime "created_at", null: false

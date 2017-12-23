@@ -12,5 +12,24 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:user) { FactoryBot.create(:user) }
+
+  it 'is valid with valid attributes' do
+    expect(user).to be_valid
+  end
+
+  it 'is invalid without name' do
+    user.name = nil
+    expect(user).to_not be_valid
+  end
+
+  it 'is invalid without email' do
+    user.email = nil
+    expect(user).to_not be_valid
+  end
+
+  it 'is invalid with invalid email format' do
+    user.email = 'a.com'
+    expect(user).to_not be_valid
+  end
 end
