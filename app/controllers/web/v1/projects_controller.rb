@@ -21,7 +21,7 @@ module Web
       private
 
       def load_project
-        @project = Project.includes(reviews: :user).where(id: params[:id]).first
+        @project = Project.includes(:images, reviews: :user).where(id: params[:id]).first
         error_response(
           error_message: I18n.t('project.not_found'),
           status_code: :unprocessable_entity
