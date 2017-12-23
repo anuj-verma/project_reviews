@@ -6,8 +6,8 @@ Rails.application.routes.draw do
       value: 'application/vnd.project_reviews.com; version=web_v1'
     }
   ) do
-    resources :projects, only: [:index, :create, :edit, :update] do
-      resources :reviews, only: [:index, :create, :edit, :update]
+    resources :projects, only: [:index, :show] do
+      resources :reviews, only: [:create, :edit, :update]
     end
   end
 end
