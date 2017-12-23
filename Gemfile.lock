@@ -194,5 +194,8 @@ DEPENDENCIES
   tzinfo-data
   versionist
 
+RUBY VERSION
+   ruby 2.4.2p198
+
 BUNDLED WITH
    1.15.4
