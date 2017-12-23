@@ -1,0 +1,45 @@
+{
+  "resource": "1. Projects",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/projects/:id",
+  "description": "P02. Project Show",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "ID of Project"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/projects/105",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.project_reviews.com; version=web_v1",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"project\": {\n      \"id\": 105,\n      \"name\": \"Heidenreich, Auer and Marvin\",\n      \"address\": \"44098 Armstrong Keys\",\n      \"description\": \"Nemo doloremque eveniet et dolorum esse. Fugit eligendi cumque quis. Aut blanditiis dignissimos beatae architecto neque. Recusandae cum laborum voluptatem sint. Quasi perspiciatis minima quis neque.\",\n      \"no_of_units\": 25,\n      \"no_of_towers\": 9,\n      \"status\": null,\n      \"price_range\": \"20 - 64 Lacs\",\n      \"reviews\": [\n        {\n          \"id\": 30,\n          \"rating\": 4,\n          \"description\": \"Corporis qui doloremque quibusdam deleniti.\",\n          \"user\": {\n            \"id\": 18,\n            \"name\": \"Prohaska Group\",\n            \"email\": \"moriah.jenkins@sanford.com\"\n          }\n        },\n        {\n          \"id\": 31,\n          \"rating\": 4,\n          \"description\": \"Corporis qui doloremque quibusdam deleniti.\",\n          \"user\": {\n            \"id\": 18,\n            \"name\": \"Prohaska Group\",\n            \"email\": \"moriah.jenkins@sanford.com\"\n          }\n        },\n        {\n          \"id\": 32,\n          \"rating\": 4,\n          \"description\": \"Corporis qui doloremque quibusdam deleniti.\",\n          \"user\": {\n            \"id\": 18,\n            \"name\": \"Prohaska Group\",\n            \"email\": \"moriah.jenkins@sanford.com\"\n          }\n        },\n        {\n          \"id\": 33,\n          \"rating\": 4,\n          \"description\": \"Corporis qui doloremque quibusdam deleniti.\",\n          \"user\": {\n            \"id\": 18,\n            \"name\": \"Prohaska Group\",\n            \"email\": \"moriah.jenkins@sanford.com\"\n          }\n        },\n        {\n          \"id\": 34,\n          \"rating\": 4,\n          \"description\": \"Corporis qui doloremque quibusdam deleniti.\",\n          \"user\": {\n            \"id\": 18,\n            \"name\": \"Prohaska Group\",\n            \"email\": \"moriah.jenkins@sanford.com\"\n          }\n        }\n      ]\n    }\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"698e0f008f274a43878f72c817bcdf71\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "9564f075-c6c0-46bb-bcd1-615c20fe66b7",
+        "X-Runtime": "0.031468",
+        "Content-Length": "1201"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl -g \"http://api.example.com/projects/105\" -X GET \\\n\t-H \"Accept: application/vnd.project_reviews.com; version=web_v1\" \\\n\t-H \"Content-Type: application/json\""
+    }
+  ]
+}

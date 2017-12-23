@@ -1,0 +1,37 @@
+{
+  "resources": [
+    {
+      "name": "1. Projects",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "P01. Listing Projects",
+          "link": "1._projects/p01._listing_projects.json",
+          "groups": "web_v1",
+          "route": "/projects",
+          "method": "get"
+        },
+        {
+          "description": "P02. Project Show",
+          "link": "1._projects/p02._project_show.json",
+          "groups": "web_v1",
+          "route": "/projects/:id",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "2. Reviews",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "R01. Creating Review for a Project",
+          "link": "2._reviews/r01._creating_review_for_a_project.json",
+          "groups": "web_v1",
+          "route": "/projects/:project_id/reviews",
+          "method": "post"
+        }
+      ]
+    }
+  ]
+}
