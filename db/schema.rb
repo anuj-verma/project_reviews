@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20171223063026) do
     t.integer "min_price"
     t.integer "max_price"
     t.string "price_metric"
+    t.json "amenities"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

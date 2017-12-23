@@ -10,6 +10,7 @@ class CreateProjects < ActiveRecord::Migration[5.1]
       t.integer :min_price
       t.integer :max_price
       t.string :price_metric
+      t.json :amenities
 
       t.timestamps
     end
