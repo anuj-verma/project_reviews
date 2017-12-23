@@ -13,8 +13,8 @@
 
 FactoryBot.define do
   factory :image do
-    name Faker::Internet.user_name
-    url Faker::Internet.url
+    name { Faker::Internet.user_name }
+    url { Faker::Company.logo }
     association :imageable, factory: :project
   end
 end

@@ -28,6 +28,7 @@ resource "1. Projects" do
     let(:user) { FactoryBot.create(:user) }
     let(:id) { project.id }
     let!(:reviews) { FactoryBot.create_list(:review, 5, user: user, project: project) }
+    let!(:images) { FactoryBot.create_list(:image, 3, imageable: project) }
 
     example 'P02. Project Show', document: :web_v1 do
       do_request

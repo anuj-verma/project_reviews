@@ -36,8 +36,8 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/projects/42/reviews",
-      "request_body": "{\"review\":{\"user_id\":39,\"description\":\"Good Project\",\"rating\":4}}",
+      "request_path": "/projects/7/reviews",
+      "request_body": "{\"review\":{\"user_id\":3,\"description\":\"Good Project\",\"rating\":4}}",
       "request_headers": {
         "Accept": "application/vnd.project_reviews.com; version=web_v1",
         "Content-Type": "application/json"
@@ -47,17 +47,17 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"review\": {\n      \"id\": 35,\n      \"rating\": 4,\n      \"description\": \"Good Project\",\n      \"user\": {\n        \"id\": 39,\n        \"name\": \"Lockman-Mraz\",\n        \"email\": \"loy_nitzsche@dickens.info\"\n      }\n    }\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"review\": {\n      \"id\": 6,\n      \"rating\": 4,\n      \"description\": \"Good Project\",\n      \"user\": {\n        \"id\": 3,\n        \"name\": \"Lakin, Schmeler and Fisher\",\n        \"email\": \"mozell.schoen@davisgulgowski.info\"\n      }\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"f465d28c570538a15763cbb442e99520\"",
+        "ETag": "W/\"724a7bd9ea39e3880caab6175fc6b9fd\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "2d0257c5-4787-4e39-a105-e2b269272d46",
-        "X-Runtime": "0.014538",
-        "Content-Length": "144"
+        "X-Request-Id": "c80e7883-727f-4562-8d82-faffe51a0739",
+        "X-Runtime": "0.014919",
+        "Content-Length": "164"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://api.example.com/projects/42/reviews\" -d '{\"review\":{\"user_id\":39,\"description\":\"Good Project\",\"rating\":4}}' -X POST \\\n\t-H \"Accept: application/vnd.project_reviews.com; version=web_v1\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"X-Api-Key: eyJhbGciOiJIUzI1NiJ9.eyJhdXRoX3Rva2VuIjoidFhiTXVMUDF1MmxpRk50aDlDVVZ3Z1RUIn0.56usA6b0hrgBqnEXUsrt6vWBpUB9F_GJ8YwEiNW_BBw\""
+      "curl": "curl \"http://api.example.com/projects/7/reviews\" -d '{\"review\":{\"user_id\":3,\"description\":\"Good Project\",\"rating\":4}}' -X POST \\\n\t-H \"Accept: application/vnd.project_reviews.com; version=web_v1\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"X-Api-Key: eyJhbGciOiJIUzI1NiJ9.eyJhdXRoX3Rva2VuIjoicTVTU0UyQTE4bkhQZlY2anlZbTF6Z1RUIn0.DpAnjfk3S_y3vfZu6u88jerotj_HmZg765PgZ0idOpA\""
     }
   ]
 }
