@@ -49,6 +49,8 @@ group :development, :test do
   gem 'factory_bot_rails'
   # Code coverage
   gem 'simplecov'
+  # Database Cleaner is a set of strategies for cleaning your database in Ruby.
+  gem 'database_cleaner'
 end
 
 group :development do
