@@ -1,6 +1,6 @@
 # Set format for Apitome See https://github.com/jejacks0n/apitome
 RspecApiDocumentation.configure do |config|
-  REQUEST_HEADERS = ['Accept', 'Content-Type']
+  REQUEST_HEADERS = ['Accept', 'Content-Type', 'X-Api-Key']
 
   config.docs_dir = Rails.root.join("doc", "api")
   config.format = :json
