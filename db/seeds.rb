@@ -55,3 +55,8 @@ Project.all.each do |project|
   end
 end
 p "*** Creating Project Reviews and Images Completed ***"
+
+# Creating Roles
+p "*** Creating Roles ***"
+ROLES.each { |role_name| Role.create(name: role_name) }
+p "*** Creating Roles Completed ***"
