@@ -1,0 +1,43 @@
+{
+  "resource": "1. Projects",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/projects",
+  "description": "P01. Listing Projects",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/projects",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.project_reviews.com; version=web_v1",
+        "Content-Type": "application/json",
+        "X-Api-Key": "eyJhbGciOiJIUzI1NiJ9.eyJhdXRoX3Rva2VuIjoiSW5ZR1g1WUE4a09hRDNaR211RkdZd1RUIn0.NTTI8D76F_DSTDBonC-UfQLD9MgR6q4i3WM3E8tXjCk"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"projects\": [\n      {\n        \"id\": 1,\n        \"name\": \"Christiansen, Weissnat and Howell\",\n        \"address\": \"1016 Broderick Oval\",\n        \"description\": \"Et voluptas est numquam voluptatem rerum. Dignissimos ipsa corrupti nostrum et. Sequi quibusdam ut dolores repudiandae sed et. Non laborum et eos. Voluptates nulla aperiam nostrum quidem.\",\n        \"no_of_units\": 91,\n        \"no_of_towers\": 1,\n        \"status\": null,\n        \"price_range\": \"25.0 - 62.0 Lacs\",\n        \"banner_url\": \"https://pigment.github.io/fake-logos/logos/medium/color/11.png\"\n      },\n      {\n        \"id\": 2,\n        \"name\": \"Ondricka Group\",\n        \"address\": \"63169 Monahan Land\",\n        \"description\": \"Et voluptas est numquam voluptatem rerum. Dignissimos ipsa corrupti nostrum et. Sequi quibusdam ut dolores repudiandae sed et. Non laborum et eos. Voluptates nulla aperiam nostrum quidem.\",\n        \"no_of_units\": 91,\n        \"no_of_towers\": 1,\n        \"status\": null,\n        \"price_range\": \"25.0 - 62.0 Lacs\",\n        \"banner_url\": \"https://pigment.github.io/fake-logos/logos/medium/color/11.png\"\n      },\n      {\n        \"id\": 3,\n        \"name\": \"Quigley Group\",\n        \"address\": \"92522 Trantow Locks\",\n        \"description\": \"Et voluptas est numquam voluptatem rerum. Dignissimos ipsa corrupti nostrum et. Sequi quibusdam ut dolores repudiandae sed et. Non laborum et eos. Voluptates nulla aperiam nostrum quidem.\",\n        \"no_of_units\": 91,\n        \"no_of_towers\": 1,\n        \"status\": null,\n        \"price_range\": \"25.0 - 62.0 Lacs\",\n        \"banner_url\": \"https://pigment.github.io/fake-logos/logos/medium/color/11.png\"\n      },\n      {\n        \"id\": 4,\n        \"name\": \"Klein-Zulauf\",\n        \"address\": \"93075 Pascale Parkways\",\n        \"description\": \"Et voluptas est numquam voluptatem rerum. Dignissimos ipsa corrupti nostrum et. Sequi quibusdam ut dolores repudiandae sed et. Non laborum et eos. Voluptates nulla aperiam nostrum quidem.\",\n        \"no_of_units\": 91,\n        \"no_of_towers\": 1,\n        \"status\": null,\n        \"price_range\": \"25.0 - 62.0 Lacs\",\n        \"banner_url\": \"https://pigment.github.io/fake-logos/logos/medium/color/11.png\"\n      },\n      {\n        \"id\": 5,\n        \"name\": \"Powlowski, Wiegand and Zboncak\",\n        \"address\": \"5050 Abigail Landing\",\n        \"description\": \"Et voluptas est numquam voluptatem rerum. Dignissimos ipsa corrupti nostrum et. Sequi quibusdam ut dolores repudiandae sed et. Non laborum et eos. Voluptates nulla aperiam nostrum quidem.\",\n        \"no_of_units\": 91,\n        \"no_of_towers\": 1,\n        \"status\": null,\n        \"price_range\": \"25.0 - 62.0 Lacs\",\n        \"banner_url\": \"https://pigment.github.io/fake-logos/logos/medium/color/11.png\"\n      }\n    ]\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"4758d117a43b26f5a328a8265faf1a04\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "019e12e2-dddf-45c8-a0ad-e01d4c8f0bdb",
+        "X-Runtime": "0.030391",
+        "Vary": "Origin",
+        "Content-Length": "2198"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl -g \"http://api.example.com/projects\" -X GET \\\n\t-H \"Accept: application/vnd.project_reviews.com; version=web_v1\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"X-Api-Key: eyJhbGciOiJIUzI1NiJ9.eyJhdXRoX3Rva2VuIjoiSW5ZR1g1WUE4a09hRDNaR211RkdZd1RUIn0.NTTI8D76F_DSTDBonC-UfQLD9MgR6q4i3WM3E8tXjCk\""
+    }
+  ]
+}

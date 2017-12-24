@@ -1,0 +1,65 @@
+{
+  "resource": "2. Reviews",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/projects/:project_id/reviews",
+  "description": "R01. Creating Review for a Project",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "project_id",
+      "description": "ID of Project for which Review will be created"
+    },
+    {
+      "scope": "review",
+      "required": true,
+      "name": "user_id",
+      "description": "ID of User creating the Review"
+    },
+    {
+      "scope": "review",
+      "required": true,
+      "name": "rating",
+      "description": "Review rating given by User"
+    },
+    {
+      "scope": "review",
+      "required": true,
+      "name": "description",
+      "description": "Review comment given by User"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/projects/7/reviews",
+      "request_body": "{\"review\":{\"user_id\":3,\"description\":\"Good Project\",\"rating\":4}}",
+      "request_headers": {
+        "Accept": "application/vnd.project_reviews.com; version=web_v1",
+        "Content-Type": "application/json",
+        "X-Api-Key": "eyJhbGciOiJIUzI1NiJ9.eyJhdXRoX3Rva2VuIjoiaVpwRG5qTm1zY25VUTFLRUdrdHpCUVRUIn0.SGcyDk694myty4H7bVlG9UMk5ZiNv6LjUZvMfPT4ZC8"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"review\": {\n      \"id\": 6,\n      \"rating\": 4,\n      \"description\": \"Good Project\",\n      \"user\": {\n        \"id\": 3,\n        \"name\": \"Nader, Schroeder and Bergstrom\",\n        \"email\": \"alicia.dubuque@smitham.co\"\n      }\n    }\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"fc30a66fe092a8a71af9cfffff95e48e\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "cffa74ad-9d10-44bc-bda6-213fcb55382f",
+        "X-Runtime": "0.015367",
+        "Vary": "Origin",
+        "Content-Length": "160"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://api.example.com/projects/7/reviews\" -d '{\"review\":{\"user_id\":3,\"description\":\"Good Project\",\"rating\":4}}' -X POST \\\n\t-H \"Accept: application/vnd.project_reviews.com; version=web_v1\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"X-Api-Key: eyJhbGciOiJIUzI1NiJ9.eyJhdXRoX3Rva2VuIjoiaVpwRG5qTm1zY25VUTFLRUdrdHpCUVRUIn0.SGcyDk694myty4H7bVlG9UMk5ZiNv6LjUZvMfPT4ZC8\""
+    }
+  ]
+}

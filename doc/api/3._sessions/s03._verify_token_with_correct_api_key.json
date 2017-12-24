@@ -1,0 +1,43 @@
+{
+  "resource": "3. Sessions",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/verify_token",
+  "description": "S03. Verify Token with correct api_key",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/verify_token",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.project_reviews.com; version=web_v1",
+        "Content-Type": "application/json",
+        "X-Api-Key": "eyJhbGciOiJIUzI1NiJ9.eyJhdXRoX3Rva2VuIjoiR05pWVlWOFN2YlVubm1zVmZPbFR4UVRUIn0.UUz7q1JoHoqqaRbV1QNLnxkyTo8q_P0PrBiGtNG3cIE"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"user\": {\n      \"id\": 6,\n      \"name\": \"McDermott-Crist\",\n      \"email\": \"faustino.steuber@schmeler.co\",\n      \"api_key\": \"eyJhbGciOiJIUzI1NiJ9.eyJhdXRoX3Rva2VuIjoiR05pWVlWOFN2YlVubm1zVmZPbFR4UVRUIn0.UUz7q1JoHoqqaRbV1QNLnxkyTo8q_P0PrBiGtNG3cIE\"\n    }\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"eb98954f35a5a046b93da5e036fbca0a\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "98e7518d-343f-4cba-9f04-ffe59dc7eff4",
+        "X-Runtime": "0.003434",
+        "Vary": "Origin",
+        "Content-Length": "223"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://api.example.com/verify_token\" -d '' -X POST \\\n\t-H \"Accept: application/vnd.project_reviews.com; version=web_v1\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"X-Api-Key: eyJhbGciOiJIUzI1NiJ9.eyJhdXRoX3Rva2VuIjoiR05pWVlWOFN2YlVubm1zVmZPbFR4UVRUIn0.UUz7q1JoHoqqaRbV1QNLnxkyTo8q_P0PrBiGtNG3cIE\""
+    }
+  ]
+}

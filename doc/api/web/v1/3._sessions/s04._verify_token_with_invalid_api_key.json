@@ -1,0 +1,42 @@
+{
+  "resource": "3. Sessions",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/verify_token",
+  "description": "S04. Verify Token with invalid api_key",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/verify_token",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.project_reviews.com; version=web_v1",
+        "Content-Type": "application/json",
+        "X-Api-Key": "invalid_api_key"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 401,
+      "response_status_text": "Unauthorized",
+      "response_body": "{\n  \"errors\": {\n    \"message\": \"Invalid API Key\"\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "3b7935d8-3b47-450d-8b1d-5ebb09577c18",
+        "X-Runtime": "0.008086",
+        "Vary": "Origin",
+        "Content-Length": "40"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://api.example.com/verify_token\" -d '' -X POST \\\n\t-H \"Accept: application/vnd.project_reviews.com; version=web_v1\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"X-Api-Key: invalid_api_key\""
+    }
+  ]
+}

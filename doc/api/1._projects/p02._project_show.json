@@ -1,0 +1,47 @@
+{
+  "resource": "1. Projects",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/projects/:id",
+  "description": "P02. Project Show",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "ID of Project"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/projects/6",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.project_reviews.com; version=web_v1",
+        "Content-Type": "application/json",
+        "X-Api-Key": "eyJhbGciOiJIUzI1NiJ9.eyJhdXRoX3Rva2VuIjoiV1Y1ZEVuT09maW5UUFQyUXhBWEZsQVRUIn0.G1soAzKbsj67qvIxFUgPOb2IDo_BdHAEqh0VdtTQgyg"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"project\": {\n      \"id\": 6,\n      \"name\": \"Mitchell-Runolfsdottir\",\n      \"address\": \"7482 Waters Parks\",\n      \"description\": \"Et voluptas est numquam voluptatem rerum. Dignissimos ipsa corrupti nostrum et. Sequi quibusdam ut dolores repudiandae sed et. Non laborum et eos. Voluptates nulla aperiam nostrum quidem.\",\n      \"no_of_units\": 91,\n      \"no_of_towers\": 1,\n      \"status\": null,\n      \"price_range\": \"25.0 - 62.0 Lacs\",\n      \"banner_url\": \"https://pigment.github.io/fake-logos/logos/medium/color/11.png\",\n      \"reviews\": [\n        {\n          \"id\": 1,\n          \"rating\": 4,\n          \"description\": \"Nihil veritatis voluptas nulla dolores dolorum.\",\n          \"user\": {\n            \"id\": 2,\n            \"name\": \"Eichmann, Gutmann and Prosacco\",\n            \"email\": \"keaton@bartellbarton.co\"\n          }\n        },\n        {\n          \"id\": 2,\n          \"rating\": 4,\n          \"description\": \"Nihil veritatis voluptas nulla dolores dolorum.\",\n          \"user\": {\n            \"id\": 2,\n            \"name\": \"Eichmann, Gutmann and Prosacco\",\n            \"email\": \"keaton@bartellbarton.co\"\n          }\n        },\n        {\n          \"id\": 3,\n          \"rating\": 4,\n          \"description\": \"Nihil veritatis voluptas nulla dolores dolorum.\",\n          \"user\": {\n            \"id\": 2,\n            \"name\": \"Eichmann, Gutmann and Prosacco\",\n            \"email\": \"keaton@bartellbarton.co\"\n          }\n        },\n        {\n          \"id\": 4,\n          \"rating\": 4,\n          \"description\": \"Nihil veritatis voluptas nulla dolores dolorum.\",\n          \"user\": {\n            \"id\": 2,\n            \"name\": \"Eichmann, Gutmann and Prosacco\",\n            \"email\": \"keaton@bartellbarton.co\"\n          }\n        },\n        {\n          \"id\": 5,\n          \"rating\": 4,\n          \"description\": \"Nihil veritatis voluptas nulla dolores dolorum.\",\n          \"user\": {\n            \"id\": 2,\n            \"name\": \"Eichmann, Gutmann and Prosacco\",\n            \"email\": \"keaton@bartellbarton.co\"\n          }\n        }\n      ],\n      \"images\": [\n        {\n          \"id\": 3,\n          \"name\": \"verona.marquardt\",\n          \"url\": \"https://pigment.github.io/fake-logos/logos/medium/color/4.png\"\n        },\n        {\n          \"id\": 2,\n          \"name\": \"treie_cole\",\n          \"url\": \"https://pigment.github.io/fake-logos/logos/medium/color/10.png\"\n        },\n        {\n          \"id\": 1,\n          \"name\": \"miguel_hickle\",\n          \"url\": \"https://pigment.github.io/fake-logos/logos/medium/color/2.png\"\n        }\n      ]\n    }\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"e6397bbedc2a298e945cafb933bfe913\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "77165ead-4ce3-46d9-bf44-014ae55729d4",
+        "X-Runtime": "0.046737",
+        "Vary": "Origin",
+        "Content-Length": "1654"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl -g \"http://api.example.com/projects/6\" -X GET \\\n\t-H \"Accept: application/vnd.project_reviews.com; version=web_v1\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"X-Api-Key: eyJhbGciOiJIUzI1NiJ9.eyJhdXRoX3Rva2VuIjoiV1Y1ZEVuT09maW5UUFQyUXhBWEZsQVRUIn0.G1soAzKbsj67qvIxFUgPOb2IDo_BdHAEqh0VdtTQgyg\""
+    }
+  ]
+}
