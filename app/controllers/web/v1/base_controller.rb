@@ -8,8 +8,6 @@ module Web
       def authenticate!
         jwt_payload = AuthHandler.decode(request.headers[X_API_KEY])
         current_user(jwt_payload: jwt_payload)
-      rescue JWT::ExpiredSignature
-        render_unauthorized(error_message: I18n.t('api_key.expired'))
       rescue JWT::DecodeError
         render_unauthorized(error_message: I18n.t('api_key.invalid'))
       end
