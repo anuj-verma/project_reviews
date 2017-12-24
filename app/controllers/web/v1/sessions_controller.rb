@@ -18,6 +18,20 @@ module Web
         end
       end
 
+      def verify_token
+        if @current_user
+          success_response(
+            data: serialize_resource(@current_user, Web::V1::UserLoginSerializer),
+            status_code: :ok
+          )
+        else
+          error_response(
+            error_message: I18n.t('user.invalid'),
+            status_code: :unauthorized
+          )
+        end
+      end
+
       private
 
       def session_params

@@ -18,5 +18,6 @@ Rails.application.routes.draw do
     end
 
     post '/login', to: 'sessions#create'
+    post '/verify_token', to: 'sessions#verify_token'
   end
 end
