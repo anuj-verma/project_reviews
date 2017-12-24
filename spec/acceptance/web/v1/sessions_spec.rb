@@ -68,4 +68,48 @@ resource '3. Sessions' do
       expect(response).to eq(invalid_response)
     end
   end
+
+  post '/verify_token' do
+    let(:user) { FactoryBot.create(:user) }
+    let(:api_key) { AuthHandler.encode(user) }
+
+    let(:valid_response) {
+      {
+        data: {
+          user: {
+            id: user.id,
+            name: user.name,
+            email: user.email,
+            api_key: api_key
+          }
+        }
+      }.with_indifferent_access
+    }
+
+    let(:invalid_response) {
+      {
+        errors: {
+          message: I18n.t('api_key.invalid')
+        }
+      }.with_indifferent_access
+    }
+
+    example 'S03. Verify Token with correct api_key', document: :web_v1 do
+      header 'X-Api-Key', api_key
+      do_request
+
+      response = JSON.parse(response_body)
+      expect(status).to eq(200)
+      expect(response).to eq(valid_response)
+    end
+
+    example 'S04. Verify Token with invalid api_key', document: :web_v1 do
+      header 'X-Api-Key', 'invalid_api_key'
+      do_request
+
+      response = JSON.parse(response_body)
+      expect(status).to eq(401)
+      expect(response).to eq(invalid_response)
+    end
+  end
 end
