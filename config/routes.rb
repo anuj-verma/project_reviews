@@ -19,4 +19,16 @@ Rails.application.routes.draw do
 
     post '/login', to: 'sessions#create'
   end
+
+  api_version(
+    module: 'Cms::V1',
+    header: {
+      name: 'Accept',
+      value: "application/#{APP_NAME}; version=cms_v1"
+    }
+  ) do
+    resources :projects, only: [:index]
+
+    post '/login', to: 'sessions#create'
+  end
 end
