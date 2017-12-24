@@ -1,6 +1,7 @@
 module Web
   module V1
     class ProjectsController < Web::V1::BaseController
+      skip_before_action :authenticate!
       before_action :load_project, only: :show
 
       def index
